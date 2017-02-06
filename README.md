@@ -13,8 +13,8 @@ Before going to implementation get ready with infrastructure.
 
 # Apache Kafka
 
-Kafaka is very good distributed messaging plateform and it can also use for streaming with latest versions.
-Download <a href="https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.1.0/kafka_2.11-0.10.1.0.tgz">apache kafaka</a>.
+Kafka is very good distributed messaging plateform and it can also use for streaming with latest versions.
+Download <a href="https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.1.0/kafka_2.11-0.10.1.0.tgz">apache kafka</a>.
 More information on kafa availabe on <a href="https://kafka.apache.org/intro">kafa wiki</a> .
 I have created topic with <i><b>partition size 2</b></i> and<i><b>replication factor 2</b></i>.
 Before ceating topic we need to run in kafaka in loacal cluster.
