@@ -1,4 +1,4 @@
-# spark-sparing-boot
+# spark-spring-boot
 This is a maven based project, which require some basic infrastructure to run this. I have use below technology or open source project.
 <ul>
 <li>Java 8</li>
@@ -11,7 +11,7 @@ Before going to implementation get ready with infrastructure.
 
 
 
-# Apache Kafaka
+# Apache Kafka
 
 Kafaka is very good distributed messaging plateform and it can also use for streaming with latest versions.
 Download <a href="https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.1.0/kafka_2.11-0.10.1.0.tgz">apache kafaka</a>.
