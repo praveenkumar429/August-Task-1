@@ -8,7 +8,9 @@ This is a maven based project, which require some basic infrastructure to run th
 </ul>
 I have created one simple application in spring boot which will push messages into kafaka topic and spark job will read that message and print on console.
 Before going to implementation get ready with infrastructure.
-# Kafaka 
+
+#  Kafaka
+
 Kafaka is very good distributed messaging plateform and it can also use for streaming with latest versions.
 Download <a href="https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.1.0/kafka_2.11-0.10.1.0.tgz">apache kafaka</a>.
 More information on kafa availabe on <a href="https://kafka.apache.org/intro">kafa wiki</a> .
