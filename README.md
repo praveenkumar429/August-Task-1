@@ -53,6 +53,8 @@ Before ceating topic we need to run in kafaka in loacal cluster.
 
 
 #Apache Spark
+Apache spark is used for data processinga na streaming. In othis example I have used for the dtat streaminga nd then kafa connector which will read data from topic and print. 
+
 
 
  
