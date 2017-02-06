@@ -19,6 +19,7 @@ import java.util.List;
 public class JavaWordCount {
     public static void main(String[] args) {
         //Create spark context
+        //JavaSparkContext jsc= new JavaSparkContext(new SparkConf().setMaster("spark://anya-Inspiron-5559:7077").setAppName("JavaWordCount"));
         JavaSparkContext jsc= new JavaSparkContext(new SparkConf().setMaster("local").setAppName("JavaWordCount"));
         //Create RDD and by loading some text file.
         JavaRDD<String> jrdd= jsc.textFile("wordcount.txt");
@@ -51,7 +52,7 @@ public class JavaWordCount {
         for (Tuple2<?,?> tuple : output) {
             System.out.println(tuple._1() + ": " + tuple._2());
         }
-        //jsc.stop();
+        jsc.stop();
 
 
 
