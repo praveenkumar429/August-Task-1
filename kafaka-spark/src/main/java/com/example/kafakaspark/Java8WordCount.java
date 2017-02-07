@@ -17,7 +17,7 @@ public class Java8WordCount {
         JavaSparkContext jsc = new JavaSparkContext(new SparkConf().setMaster("local").setAppName("JavaWordCount"));
 
         //Create RDD and by loading some text file.
-        JavaRDD<String> jrdd = jsc.textFile("wordcount.txt")
+        JavaRDD<String> jrdd = jsc.textFile("user.txt")
                 .flatMap(line->Arrays.asList(line.split(" ")).iterator());
         jrdd.foreach(line-> System.out.println(line));
 
