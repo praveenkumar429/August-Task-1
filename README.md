@@ -57,8 +57,32 @@ Before ceating topic we need to run in kafaka in loacal cluster.
 
 
 # Apache Spark
-Apache spark is used for data processinga na streaming. In othis example I have used for the dtat streaminga nd then kafa connector which will read data from topic and print. 
+Apache spark is used for data processing ana streaming. In this example I have used for the data streaming and then kafa connector which will read data from topic and print.
+We have another module kafka -spark  where we are consuming message kafka topic. To run this example you need to run kafka and previous program for pushing message into topics
+then prepare spark context in local mode which is already available in program.
+    </br>
+    <p>
+    <code>
+     SparkConf conf = new SparkConf()
+                    .setAppName("kafka-sandbox")
+                    .setMaster("local[*]");
+            JavaSparkContext sc = new JavaSparkContext(conf);
+    </code>
+    </p>
 
+After spark context create stream object and fetch message from kafka topic and stream as an spark RDD.
+ 
+ <p>
+    <code>
+        JavaPairInputDStream<String, String> directKafkaStream = KafkaUtils.createDirectStream(ssc,
+                        String.class, String.class, StringDecoder.class, StringDecoder.class, kafkaParams, topics);      
+                        directKafkaStream.foreachRDD(rdd -> {
+                    System.out.println("--- New RDD with " + rdd.partitions().size()
+                            + " partitions and " + rdd.count() + " records");
+                    rdd.foreach(record -> System.out.println(record._2));
+                });
+    </code>
+ </p>
 
 
  
